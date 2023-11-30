@@ -1,0 +1,241 @@
+#for-transform {
+    height: 150px;
+    width: 300px;
+    background-image: repeating-linear-gradient(45deg, #9e6df9, #f77656 25%, #5ffc87 50%);
+    transition: 1s ease-in-out;
+}
+#for-transform:hover{
+    transform: translate(100px) scale(0.5);
+}
+
+#lightbox{
+    height:0;
+    width:0;
+    position:fixed;
+    left:0;
+    top:160px;
+    overflow:hidden;
+    background-color:lightgrey;
+    transition:all 2s ease-in-out;
+
+}
+#lightbox:target{
+    height:25%;
+    width:25%;
+    top:25%;
+    left:25%;        
+}
+
+
+#rotate-shape{
+    height:50px;
+    width:50px;
+    background-color: cyan;
+    transition: 1s steps(7,end);
+}
+
+#rotate-shape:hover{
+    transform: rotate(90deg) scale(0.25) translateX(100px);
+    border-radius: 50%;
+
+}
+
+
+#animation-property{
+    width:75px;
+    height:75px;
+    background-color: red;
+    animation: changeShape 2s linear infinite alternate;
+}
+
+@keyframes changeShape{
+    from{
+        border-radius: 0%;
+
+    }
+    to{
+        border-radius: 50%;
+        background-color: black;
+    }
+}
+
+#bounce-box{
+    width:300px;
+    height:300px;
+    background-color: black;
+}
+
+#bounce{
+    width: 75px;
+    height: 75px;
+    background-color: green;
+    position: absolute;
+    left: 70px;
+    animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce{
+    from{
+        transform: translateY(0px);
+    }
+    12.5%{
+        transform: translateY(-100px);
+    }
+    25%{
+        transform: translateY(0px);
+    }
+    37.5%{
+        transform: translateY(-75px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    62.5%{
+        transform: translateY(-50px);
+    }
+    75%{
+        transform: translateY(0px);
+    }
+    87.5%{
+        transform: translateY(-25px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+
+#rotate{
+    width: 75px;
+    height: 75px;
+    animation: rotating 0.5s ease-in-out infinite alternate;
+    background-color: yellow;
+}
+
+@keyframes rotating{
+    from{
+        transform: rotate(0deg);
+    }
+    12.5%{
+        transform: rotate(45deg);
+    }
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(135deg);
+    }
+    75%{
+        transform: rotate(180deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+#fade-in{
+    border:2px solid black;
+    font-weight: 700;
+    animation: fading 4s ease-out infinite alternate;
+}
+
+@keyframes fading{
+    from{
+        border-color: black;
+        color: black;
+    }
+    to{
+        border-color: white;
+        color: white;
+    }
+}
+
+
+
+.cube{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin:100px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transform: rotateX(40deg) rotateY(40deg);
+/*transform: rotateX(90deg);*/
+}
+
+
+.face
+{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top: 1%;
+    left: 20%;
+    transition: all 1s;
+}
+
+
+
+.one
+{
+    background-color: orange;
+}
+
+
+.two
+{
+    background-color: green;
+    transform: rotateY(90deg) translateX(100px) translateZ(100px);
+}
+
+
+.three
+{
+    background-color: lightgrey;
+    transform: rotateY(90deg) translateX(100px) translateZ(-100px);
+}
+
+
+.four
+{
+    background-color: deeppink;
+    transform: translateZ(-200px);
+}
+
+
+.five
+{
+    background-color: blue;
+    transform: rotateX(90deg) translateZ(100px) translateY(-100px);
+}
+
+
+.six
+{
+    background-color: greenyellow;
+    transform: rotateX(90deg) translateZ(-100px) translateY(-100px);
+}
+
+
+
+
+
+
+h1{
+    text-align: center;
+    color: lightgrey;
+}
+#div1{
+    word-break:break-word;
+    box-shadow:0 0 6px 4px lightgrey;
+    margin-top:25%;
+}
+
+#div2{
+    border:4px solid red;
+    height:50vh;
+    background-image:url("https://ninjasfiles.s3.amazonaws.com/asset_0000000000000024_1550237299_codezen.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-color: black;
+}
